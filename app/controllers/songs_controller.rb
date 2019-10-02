@@ -26,6 +26,8 @@ class SongsController < ApplicationController
     elsif @song.nil?
       flash[:alert] = "Song not found"
       redirect_to songs_path
+    else
+      render "show"
     end
   end
 
