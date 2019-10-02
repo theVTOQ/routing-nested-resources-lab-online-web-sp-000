@@ -5,7 +5,8 @@ class SongsController < ApplicationController
       if artist != nil
         @songs = artist.songs
       else
-        redirect_to artists_path, flash: {alert: "Artist not found"}
+        flash[:alert] = "Artist not found"
+        redirect_to artists_path
       end
     else
       @songs = Song.all
