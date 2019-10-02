@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index]
   end
 
-  resources :songs, only: [:show, :index]
+  resources :songs
 
   root 'songs#index'
 end
